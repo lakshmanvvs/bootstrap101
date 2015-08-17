@@ -1,0 +1,34 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.myform {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.myform .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 12px;
+}
+.editreserve{
+    position: relative;
+    margin: 0 auto;
+    max-width: 300px;
+}
+.myButton{
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: auto;
+    max-width: 300px;
+
+}

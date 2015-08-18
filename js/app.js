@@ -3,12 +3,13 @@
  */
 (function(){
 
-    angular.module('restroportal',['ngRoute'])
+    angular.module('restroportal',['ngRoute','ngMessages'])
         .config(moduleConfig);
 
     moduleConfig.$inject = ['$routeProvider'];
     function moduleConfig($routeProvider){
         $routeProvider
+
             .when('/customers',{
                 templateUrl: 'customer-tmpl.html',
                 controller: 'CustomerCtrl',

@@ -17,3 +17,7 @@
  .form-group{
      width: 300px;
  }
+
+ .has-error p {
+     color: #ff050a;
+ }

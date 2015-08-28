@@ -1,4 +1,4 @@
-# bootstrap101
+# Restroportal
 Restaurant reservation portal
 
 This portal requires IE10, Google Chrome and Mozilla Firefox 15+

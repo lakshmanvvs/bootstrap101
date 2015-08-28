@@ -30,10 +30,21 @@
                 controller: 'EditCtrl',
                 controllerAs: 'EditVm'
             })
+            .when('/customers/delete/:code', {
+                templateUrl: 'customer-delete-tmpl.html',
+                controller: 'DeleteCtrl',
+                controllerAs: 'DeleteVm'
+            })
+
             .when('/owner',{
                 templateUrl: 'ownersign-tmpl.html',
                 controller: 'LoginCtrl',
                 controllerAs: 'LoginVm'
+            })
+            .when('/viewAll',{
+                templateUrl: 'ownersign-tmpl.html',
+                controller: '',
+                controllerAs: ''
             })
             .otherwise({
                 redirectTo: '/customers'

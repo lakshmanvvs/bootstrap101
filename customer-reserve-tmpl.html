@@ -19,7 +19,7 @@
     </div>
     <div class = "form-group">
         <label for= "rdate">Date </label>
-        <input type ="date" name="rdate" class="form-control" id="rdate" required>
+        <input type ="date" name="rdate" class="form-control" ng-model="CustomerVm.newCustomer.reserveDate" id="rdate" required>
         <div ng-messages="customerForm.rdate.$error"  class="has-error" ng-if="customerForm.rdate.$dirty">
             <p ng-message="required">Date is required</p>
         </div>
@@ -27,16 +27,16 @@
 
 <div class="form-group">
     <label for="partysize">Party Size</label>
-    <input type="number" name="partysize" class="form-control" id="partysize" required placeholder="Party size">
+    <input type="number" name="partysize" class="form-control" ng-model="CustomerVm.newCustomer.partySize" id="partysize" required placeholder="Party size">
     <div ng-messages="customerForm.partysize.$error"  class="has-error" ng-if="customerForm.partysize.$dirty">
         <p ng-message="required">Party Size is required</p>
     </div>
 </div>
 <div class="form-group">
     <label for="phone">Phone #</label>
-    <input type="number" class="form-control" id="phone"  min=10 required placeholder="Phone number">
+    <input type="number" name = "phone" class="form-control" id="phone" ng-model="CustomerVm.newCustomer.phoneNumber" min=10 required placeholder="Phone number">
     <div ng-messages="customerForm.name.$error"  class="has-error" ng-if="customerForm.name.$dirty">
-        <p ng-message="required">Name is required</p>
+        <p ng-message="required">Phone no is required</p>
     </div>
 </div>
     <button class="btn btn-primary" type="submit">Reserve</button>

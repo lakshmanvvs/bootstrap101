@@ -1,7 +1,46 @@
 <form  ng-submit ="EditVm.findCode()" class = "myform">
-<div class = "form-group">
+    <div class = "form-group">
+        <label for= "firstName">First Name</label>
+        <input type ="text"  name="firstname" class="form-control" ng-model="EditVm.editCustomer.firstname" id="firstName" required>
+
+        <div ng-messages="customerForm.firstname.$error"  class="has-error" ng-if="customerForm.firstname.$dirty">
+            <p ng-message="required">Name is required</p>
+        </div>
+    </div>
+    <div class = "form-group">
+        <label for= "lastName">Last Name</label>
+        <input type ="text"  name="lastname" class="form-control" ng-model="EditVm.editCustomer.lastname" id="lastName" required>
+        <div ng-messages="customerForm.lastname.$error"  class="has-error" ng-if="customerForm.lastname.$dirty">
+            <p ng-message="required">Name is required</p>
+        </div>
+    </div>
+    <div class = "form-group">
+        <label for= "rdate">Date </label>
+        <input type ="date" name="rdate" class="form-control" id="rdate" ng-model = "Editvm.editCustomer.reserveDate" required>
+        <div ng-messages="customerForm.rdate.$error"  class="has-error" ng-if="customerForm.rdate.$dirty">
+            <p ng-message="required">Date is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="partysize">Party Size</label>
+        <input type="number" name="partysize" class="form-control"  ng-model = "Editvm.editCustomer.partySize" id="partysize" required placeholder="Party size">
+        <div ng-messages="customerForm.partysize.$error"  class="has-error" ng-if="customerForm.partysize.$dirty">
+            <p ng-message="required">Party Size is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone #</label>
+        <input type="number" name = "phone" class="form-control" id="phone"  ng-model = "Editvm.editCustomer.phoneNumber" min=10 required placeholder="Phone number">
+        <div ng-messages="customerForm.name.$error"  class="has-error" ng-if="customerForm.name.$dirty">
+            <p ng-message="required">Phone no is required</p>
+        </div>
+    </div>
+    
+    
+    <div class = "form-group">
     <label for= "edit">Confirmation Code</label>
-    <input type ="text"  placeholder="Your confirmation code" class="form-control" id="edit" required>
+    <input type ="text"  placeholder="Your confirmation code" class="form-control" ng-model = "Editvm.confirmCode" id="edit" required>
 </div>
-    <button class="btn btn-primary" type="submit">Find</button>
+    <button class="btn btn-primary" type="submit">Update</button>
  </form>

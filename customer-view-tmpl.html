@@ -1,0 +1,25 @@
+<div class="container">
+    <h3>Customers</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Confirmation Code</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Reserve Date</th>
+            <th>Party Size</th>
+            <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="(k,v) in CustomerVm.people">
+            <td>{{v.confirmCode}}</td>
+            <td>{{v.firstName}}</td>
+            <td>{{v.lastName}}</td>
+            <td>{{v.ReserveDate}}</td>
+            <td>{{v.partySize}</td>
+            <td>{{v.phoneNumber}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

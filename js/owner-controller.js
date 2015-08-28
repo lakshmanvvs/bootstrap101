@@ -7,11 +7,27 @@
         .module('restroportal')
         .controller('LoginCtrl', LoginController);
 
-    function LoginController(){
+    LoginController.$inject = ['$http'];
+
+    function LoginController($http){
         var LoginVm = this;
         console.log('Owner login Controller');
         //CustomerVm.setPage ='/customers/reserve';
-        //CustomerVm.setPage2= '/customers/edit';
+        //CustomerVm.setPage2= '/customers/
+
+        LoginVm.login = function(){
+
+            $http({
+                method: 'POST',
+                url: 'api/owner/login',
+                data: LoginVm.loginOwner
+            }).success(function(data){
+                console.log(data);
+                LoginVm.loginOwner = null;
+            }).error(function(error){
+                console.log(error);
+            });
+        };
     }
 
 })();
